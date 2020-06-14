@@ -19,7 +19,6 @@ app.get('/', (req: Request, res: Response) => {
 
 app.post('/', (req: Request, res: Response) => {
     let body: {Body: any, From: any, To: any} = {Body: req.body.Body, From: fromPhone, To: toPhone};
-    console.log(twilioSID, twilioToken);
     request.post(messagingUrl, {
         auth: {
             username: twilioSID,
